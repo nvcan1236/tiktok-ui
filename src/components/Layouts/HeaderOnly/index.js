@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 
-
 function HeaderOnly({ children }) {
     return (
         <>

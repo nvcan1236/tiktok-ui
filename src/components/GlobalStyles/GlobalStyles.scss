@@ -47,8 +47,21 @@
     font-style: normal;
 }
 
+:root {
+    --primary: #fe2c55;
+    --white: #fff;
+    --black: #000;
+    --text-color: #000;
+
+    // defaultlayout
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px;
+}
+
 * {
     box-sizing: border-box;
+    margin: 0;;
+    padding: 0;
 }
 
 html {
@@ -59,4 +72,14 @@ body {
     font-family: 'ProximaNova';
     font-size: 1.6rem;
     line-height: 1.5;
+}
+
+button, input, [tabindex]{
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }

@@ -1,0 +1,81 @@
+.wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: 'ProximaNova';
+    color: var(--black);
+    background-color: var(--white);
+    cursor: pointer;
+
+    & + .wrapper {
+        margin-left: 8px;
+    }
+
+    .icon + .title, .title + .icon {
+        margin-left: 16px;
+    }
+}
+
+// Button type
+.text {
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    font-weight: 600;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.rounded {
+    border-radius: 999px;
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+
+    &:hover {
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+
+.outline {
+    color: var(--primary);
+    font-weight: 600;
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+// Button size
+.small {
+    padding: 5px 16px;
+    min-width: 88px;
+}
+
+.large {
+    font-size: 1.8rem;
+    padding: 10px 16px;
+    min-width: 160px;
+}
+
+// disable
+.disabled {
+    opacity: 0.5;
+    user-select: none;
+    cursor: default;
+}
