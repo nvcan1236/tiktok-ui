@@ -18,7 +18,18 @@
     }
 
     .icon + .title, .title + .icon {
-        margin-left: 16px;
+        margin-left: 8px;
+    }
+
+    .icon {
+        text-align: center;
+        width: 20px;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        user-select: none;
+        cursor: default;
     }
 }
 
@@ -74,8 +85,4 @@
 }
 
 // disable
-.disabled {
-    opacity: 0.5;
-    user-select: none;
-    cursor: default;
-}
+
