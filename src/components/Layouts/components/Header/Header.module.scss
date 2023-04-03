@@ -94,6 +94,31 @@
 }
 
 // menu
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    font-size: 2rem;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.avatar {
+    margin-left: 24px;
+    width: 32px;
+    height: 32px;
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .more-btn {
     width: 20px;
     height: 20px;

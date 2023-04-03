@@ -1,4 +1,6 @@
 @import 'normalize.css';
+
+// font
 @font-face {
     font-family: 'SofiaPro';
     src: url(//lf16-tiktok-common.ttwstatic.com/obj/tiktok-web-common-sg/falcon/tiktok_fonts/sofiapro-bold.woff2)
@@ -83,4 +85,21 @@ button, input, [tabindex]{
 a {
     text-decoration: none;
     color: var(--text-color);
+}
+
+// Tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        line-height: 22px;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+        padding: 3px;
+        font-size: 1.6rem;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
 }
