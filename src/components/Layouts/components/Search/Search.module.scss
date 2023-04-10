@@ -52,7 +52,17 @@
     top: 50%;
     transform: translateY(-50%);
     color: rgba(22, 24, 35, 0.34);
-    background-color: transparent;
+    height: 13.33px;
+}
+
+.load {
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 .search-btn {
     width: var(--search-btn-width);

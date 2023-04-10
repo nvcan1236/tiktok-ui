@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,13 +8,41 @@ import AcountItem from '~/components/AcountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Search.module.scss';
 import { SearchIcon } from '~/components/Icons';
+import useDebounce from '~/hooks/useDebounce';
 const cx = classNames.bind(styles);
 
 function Search() {
-    const [results, setResults] = useState([1]);
+    const [results, setResults] = useState([]);
     const [searchInput, setSearchInput] = useState('');
     const [showResults, setShowResults] = useState(true);
+    const [loading, setLoading] = useState(false);
     const inputRef = useRef();
+    const debounceValue = useDebounce(searchInput, 500);
+
+    const handleSearchInput = (e)=> {
+
+        if(!e.target.value || e.target.value.startsWith(' ')) {
+            setSearchInput(e.target.value.trim());
+            return;
+        }
+
+        setSearchInput(e.target.value);
+    }
+
+    useEffect(()=>{
+        if(!debounceValue) {
+            return;
+        }
+        console.log("Gui API");
+
+        setLoading(true);
+        fetch(`https://jsonplaceholder.typicode.com/users`)
+        .then(res=>res.json())
+        .then((res)=> {
+            setResults(res);
+            setLoading(false)
+        })
+    }, [debounceValue])
 
     const handleClear = () => {
         setSearchInput('');
@@ -46,9 +74,7 @@ function Search() {
                 <input
                     placeholder="Search accounts and videos"
                     spellCheck={false}
-                    onChange={(e) => {
-                        setSearchInput(e.target.value);
-                    }}
+                    onChange={handleSearchInput}
                     onFocus={() => {
                         setShowResults(true);
                     }}
@@ -56,14 +82,14 @@ function Search() {
                     ref={inputRef}
                 />
 
-                {!!searchInput && (
+                {!!searchInput && !loading && (
                     <button className={cx('clear')} onClick={handleClear}>
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
                 )}
-                {/* <button className={cx('load')}>
+                {loading && <button className={cx('load')}>
                     <FontAwesomeIcon icon={faSpinner} />
-                </button> */}
+                </button>}
 
                 <button className={cx('search-btn')}>
                     <SearchIcon width="24" height="24" />
