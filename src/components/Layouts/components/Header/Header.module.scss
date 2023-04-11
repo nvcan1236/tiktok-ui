@@ -20,7 +20,10 @@
     padding: 0 var(--default-layout-hor-spacer);
 }
 
-
+// logo
+.logo-link {
+    display: flex;
+}
 
 // menu
 .actions {

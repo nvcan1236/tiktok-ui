@@ -3,12 +3,13 @@ import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import HeaderOnly  from '~/components/Layouts/HeaderOnly'
+import routeConfig from '~/configs/routeConfigs';
 
 export const publicRoutes = [
-    {path: '/', component: Home},
-    {path: '/following', component: Following},
-    {path: '/profile', component: Profile},
-    {path: '/upload', component: Upload, layout: HeaderOnly},
+    {path: routeConfig.home, component: Home},
+    {path: routeConfig.following, component: Following},
+    {path: routeConfig.profile, component: Profile},
+    {path: routeConfig.upload, component: Upload, layout: HeaderOnly},
 ]
 
 export const privateRoutes = [

@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import TippyHeadless from '@tippyjs/react/headless';
+
 import AcountItem from '~/components/AcountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Search.module.scss';
 import { SearchIcon } from '~/components/Icons';
 import useDebounce from '~/hooks/useDebounce';
-import * as searchService from '~/apiServices/searchService';
+import * as searchService from '~/apiServices/searchService';;
 const cx = classNames.bind(styles);
 
 function Search() {
@@ -21,8 +21,9 @@ function Search() {
     const debounceValue = useDebounce(searchInput, 500);
 
     const handleSearchInput = (e) => {
-        if (!e.target.value || e.target.value.startsWith(' ')) {
-            setSearchInput(e.target.value.trim());
+        const searchValue = e.target.value;
+        if (searchValue.startsWith(' ')) {
+            //setSearchInput(e.target.value.trim());
             return;
         }
 
@@ -73,7 +74,7 @@ function Search() {
                                 );
                             })
                             .map((user) => {
-                                return <AcountItem user={user} key={user.id} />;
+                                return <AcountItem user={user} key={user.id} />
                             })}
                     </PopperWrapper>
                 </div>
@@ -102,7 +103,7 @@ function Search() {
                     </button>
                 )}
 
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={e=>e.preventDefault()}>
                     <SearchIcon width="24" height="24" />
                 </button>
             </div>
