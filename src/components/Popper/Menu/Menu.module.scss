@@ -4,9 +4,16 @@
 
 .menu-list {
     padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+
     
     .menu-item {
         margin-left: 0;
+    }
+
+    .menu-body {
+        overflow-y: auto;
     }
 }
 
@@ -18,7 +25,7 @@
     align-items: center;
     width: 100%;
     border-radius: 0;
-    padding: 9px 8px 9px 16px;
+    padding: 8px 8px 8px 16px;
     font-weight: 600;
     line-height: 24px;
     border: 0;
