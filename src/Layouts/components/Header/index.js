@@ -1,12 +1,9 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faPlus,
-    faEllipsisVertical,
-} from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images/index';
@@ -24,7 +21,7 @@ import {
     UserIcon,
 } from '~/components/Icons';
 import Image from '~/components/Images';
-import Search from '~/components/Layouts/components/Search';
+import Search from '../Search';
 
 const MENU_ITEMS = [
     {
@@ -95,7 +92,7 @@ function Header() {
                 <Link to="/" className={cx('logo-link')}>
                     <img src={images.logo} alt="logo" />
                 </Link>
-                
+
                 <Search />
 
                 <div className={cx('actions')}>
@@ -123,11 +120,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <Image
-                                src=""
-                                alt="avatar"
-                                className={cx('avatar')}
-                            />
+                            <Image src="" alt="avatar" className={cx('avatar')} />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
