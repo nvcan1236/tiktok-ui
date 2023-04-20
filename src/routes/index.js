@@ -4,11 +4,13 @@ import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import HeaderOnly  from '~/Layouts/HeaderOnly'
 import config from '~/configs';
+import Live from '~/pages/Live/Live';
 
 export const publicRoutes = [
     {path: config.route.home, component: Home},
     {path: config.route.following, component: Following},
     {path: config.route.profile, component: Profile},
+    {path: config.route.live, component: Live},
     {path: config.route.upload, component: Upload, layout: HeaderOnly},
 ]
 

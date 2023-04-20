@@ -32,6 +32,9 @@ function Menu({ items = [], children, onChange, hideOnClick = false }) {
             );
         });
     };
+    const resetMenu = () => {
+        setHistory((prev) => prev.slice(0, history.length - 1));
+    }
 
     return (
         <Tippy
@@ -48,9 +51,7 @@ function Menu({ items = [], children, onChange, hideOnClick = false }) {
                             <HeaderMenu
                                 title={'Language'}
                                 className={cx('menu-header')}
-                                onBack={() => {
-                                    setHistory((prev) => prev.slice(0, history.length - 1));
-                                }}
+                                onBack={resetMenu}
                             />
                         )}
                         <div className={cx('menu-body')}>{renderItems()}</div>

@@ -10,7 +10,8 @@
     justify-content: center;
     min-height: 1000px;
     width: var(--default-layout-width);
-    padding: 0 var(--default-layout-hor-spacer);
+    max-width: 100%;
+    // padding-right: var(--default-layout-hor-spacer);
     margin-top: 60px;
 }
 

@@ -4,6 +4,7 @@ const config = {
         following: '/following',
         profile: '/profile/:nickname',
         upload: '/upload',
+        live: '/live',
     }
 }
 
