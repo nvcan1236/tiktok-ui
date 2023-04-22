@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import config from '~/configs';
 import {HomeIcon, HomeActiveIcon, UserGroupIcon, UserGroupActiveIcon, CameraIcon, CameraActiveIcon} from '~/components/Icons'
 import Home from '~/pages/Home/Home';
+import SuggestAccounts from '~/components/SuggestAccounts/SuggestAccounts';
 
 const cx = classNames.bind(styles)
 
@@ -16,6 +17,9 @@ function SideBar() {
                     <MenuItem title="Following" icon={<UserGroupIcon/>} iconActive={<UserGroupActiveIcon/>} to={config.route.following}/>
                     <MenuItem title="LIVE" icon={<CameraIcon/>} iconActive={<CameraActiveIcon/>} to={config.route.live}/>
                 </Menu>
+
+                <SuggestAccounts label='Suggested Accounts'/>
+                <SuggestAccounts label='Following Accounts'/>
             </div>
         </div>
     );
