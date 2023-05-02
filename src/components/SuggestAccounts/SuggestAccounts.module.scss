@@ -10,17 +10,14 @@
         height: 1px;
         left: 8px;
         right: 8px;
-        background-color: rgba(22, 24, 35, .12);
+        background-color: rgba(22, 24, 35, 0.12);
     }
 }
-
-
-
 
 .label {
     padding: 0 8px;
     margin-bottom: 8px;
-    color: rgba(22, 24, 35, .75);
+    color: rgba(22, 24, 35, 0.75);
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 20px;
@@ -37,8 +34,7 @@
     cursor: pointer;
 }
 
-
-// Account Item 
+// Account Item
 .account-item {
     padding: 8px;
     display: flex;
@@ -83,4 +79,58 @@
     font-size: 1.2rem;
     line-height: 15px;
     color: rgba(22, 24, 35, 0.75);
+}
+
+// miniprofile
+.miniprofile {
+    width: 320px;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+    border-radius: 8px;
+}
+
+.miniprofile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+    }
+
+    .follow-btn {
+        padding: 6px 8px;
+        min-width: 106px;
+        min-height: 28px;
+        line-height: 22px;
+    }
+}
+
+.miniprofile-body {
+    .username {
+        font-size: 1.8rem;
+
+    }
+
+    .name {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .analytical {
+        margin-top: 8px;
+        font-size: 1.7rem;
+
+        .followers {
+            margin-right: 12px;
+        }
+
+        strong {
+            margin-right: 6px;
+        }
+    }
 }

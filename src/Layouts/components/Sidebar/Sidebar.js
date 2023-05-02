@@ -3,8 +3,8 @@ import styles from './Sidebar.module.scss';
 import classNames from 'classnames/bind';
 import config from '~/configs';
 import {HomeIcon, HomeActiveIcon, UserGroupIcon, UserGroupActiveIcon, CameraIcon, CameraActiveIcon} from '~/components/Icons'
-import Home from '~/pages/Home/Home';
 import SuggestAccounts from '~/components/SuggestAccounts/SuggestAccounts';
+import DiscoverTags from './DiscoverTags/DiscoverTags';
 
 const cx = classNames.bind(styles)
 
@@ -20,6 +20,8 @@ function SideBar() {
 
                 <SuggestAccounts label='Suggested Accounts'/>
                 <SuggestAccounts label='Following Accounts'/>
+
+                <DiscoverTags />
             </div>
         </div>
     );

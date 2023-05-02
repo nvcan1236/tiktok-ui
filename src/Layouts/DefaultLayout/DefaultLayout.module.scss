@@ -6,12 +6,11 @@
 
 }
 .container {
+    flex: 1;
     display: flex;
     justify-content: center;
-    min-height: 1000px;
     width: var(--default-layout-width);
     max-width: 100%;
-    // padding-right: var(--default-layout-hor-spacer);
     margin-top: 60px;
 }
 
