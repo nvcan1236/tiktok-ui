@@ -1,0 +1,123 @@
+.wrapper {
+  padding: 16px 0;
+  position: relative;
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 1px;
+  left: 8px;
+  right: 8px;
+  background-color: rgba(22, 24, 35, 0.12);
+}
+
+.label {
+  padding: 0 8px;
+  margin-bottom: 8px;
+  color: rgba(22, 24, 35, 0.75);
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 20px;
+  display: block;
+}
+
+.more-btn {
+  display: inline-block;
+  padding: 0 8px;
+  margin-top: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.account-item {
+  padding: 8px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 200ms ease-in-out 0s;
+}
+.account-item:hover {
+  background: rgba(22, 24, 35, 0.03);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.infor {
+  flex: 1;
+}
+
+.username-wrapper {
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: -3px;
+}
+
+.username {
+  letter-spacing: 0.3px;
+}
+
+.check {
+  margin-left: 4px;
+  color: rgb(32, 213, 236);
+}
+
+.name {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.miniprofile {
+  width: 320px;
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+  border-radius: 8px;
+}
+
+.miniprofile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.miniprofile-header .avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.miniprofile-header .follow-btn {
+  padding: 6px 8px;
+  min-width: 106px;
+  min-height: 28px;
+  line-height: 22px;
+}
+
+.miniprofile-body .username {
+  font-size: 1.8rem;
+}
+.miniprofile-body .name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.miniprofile-body .analytical {
+  margin-top: 8px;
+  font-size: 1.7rem;
+}
+.miniprofile-body .analytical .followers {
+  margin-right: 12px;
+}
+.miniprofile-body .analytical strong {
+  margin-right: 6px;
+}/*# sourceMappingURL=SuggestAccounts.module.css.map */

@@ -1,0 +1,7 @@
+.wrapper {
+  width: 340px;
+  padding: 20px 0 26px 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - var(--default-layout-header-height));
+}/*# sourceMappingURL=Sidebar.module.css.map */

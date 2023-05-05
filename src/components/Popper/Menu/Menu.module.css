@@ -1,0 +1,53 @@
+.menu-popper {
+  width: 224px;
+}
+
+.menu-list {
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-list .menu-item {
+  margin-left: 0;
+}
+.menu-list .menu-body {
+  overflow-y: auto;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-radius: 0;
+  padding: 8px 8px 8px 16px;
+  font-weight: 600;
+  line-height: 24px;
+  border: 0;
+}
+.menu-item:hover {
+  background-color: rgba(22, 24, 35, 0.03);
+}
+.menu-item.seprature {
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.menu-header {
+  position: relative;
+  margin-top: -8px;
+}
+
+.back-btn {
+  height: 50px;
+  padding-left: 28px;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=Menu.module.css.map */
