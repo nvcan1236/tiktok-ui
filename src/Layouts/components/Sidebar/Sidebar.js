@@ -4,7 +4,8 @@ import classNames from 'classnames/bind';
 import config from '~/configs';
 import {HomeIcon, HomeActiveIcon, UserGroupIcon, UserGroupActiveIcon, CameraIcon, CameraActiveIcon} from '~/components/Icons'
 import SuggestAccounts from '~/components/SuggestAccounts/SuggestAccounts';
-import DiscoverTags from './DiscoverTags/DiscoverTags';
+import DiscoverTags from './DiscoverTags';
+import Footer from './Footer';
 
 const cx = classNames.bind(styles)
 
@@ -22,6 +23,8 @@ function SideBar() {
                 <SuggestAccounts label='Following Accounts'/>
 
                 <DiscoverTags />
+
+                <Footer />
             </div>
         </div>
     );

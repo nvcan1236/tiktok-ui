@@ -260,7 +260,7 @@ export const CameraActiveIcon = ({ width, height, className }) => (
 
 export const TagIcon = ({ width, height, className }) => (
     <svg
-        class="tiktok-1hy6k9f-StyledNumber eikhr9j9"
+        className="tiktok-1hy6k9f-StyledNumber eikhr9j9"
         width="16"
         data-e2e=""
         height="16"
@@ -277,7 +277,7 @@ export const TagIcon = ({ width, height, className }) => (
 );
 export const SoundIcon = ({ width, height, className }) => (
     <svg
-        class="tiktok-15gak6d-StyledMusicNote eikhr9j10"
+        className="tiktok-15gak6d-StyledMusicNote eikhr9j10"
         width="16"
         data-e2e=""
         height="16"

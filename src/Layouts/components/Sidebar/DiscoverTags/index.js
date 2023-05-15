@@ -1,2 +1,2 @@
-export {DiscoverTags as Default} from './DiscoverTags';
-export {Tag} from './Tag';
+export {default} from './DiscoverTags';
+export {default as Tag} from './Tag';

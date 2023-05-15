@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 16px 8px 8px 8px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+
+    &.footer {
+        padding: 16px 0 0 8px;
+    }
+}
