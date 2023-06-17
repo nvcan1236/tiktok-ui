@@ -40,7 +40,7 @@ function Search() {
             setLoading(true);
 
             const results = await searchService.search(debounceValue);
-            setResults(results);
+            setResults(results.data);
 
             setLoading(false);
         };
@@ -71,8 +71,8 @@ function Search() {
                             {results
                                 .filter((item) => {
                                     return (
-                                        item.name.toLowerCase().includes(debounceValue.toLowerCase()) ||
-                                        item.username.toLowerCase().includes(debounceValue.toLowerCase())
+                                        item.full_name.toLowerCase().includes(debounceValue.toLowerCase()) ||
+                                        item.nickname.toLowerCase().includes(debounceValue.toLowerCase())
                                     );
                                 })
                                 .map((user) => {

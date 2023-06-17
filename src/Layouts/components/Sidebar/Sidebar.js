@@ -11,7 +11,7 @@ const cx = classNames.bind(styles)
 
 function SideBar() {
     return (
-        <div className={cx('wrapper')}>
+        <aside className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <Menu>
                     <MenuItem title="For you" icon={<HomeIcon/>} iconActive={<HomeActiveIcon/>} to={config.route.home}/>
@@ -26,7 +26,7 @@ function SideBar() {
 
                 <Footer />
             </div>
-        </div>
+        </aside>
     );
 }
 

@@ -32,7 +32,7 @@ function Footer() {
                 <FooterItem to="https://www.tiktok.com" title="Community Guidelines" />
             </div>
             <div className={cx('links-container')}>
-                <FooterItem readonly title="© 2023 TikTok cloned by nvcan1236" />
+                <FooterItem readonly title="© 2023 TikTok - Cloned by nvcan1236" />
             </div>
         </Section>
     );

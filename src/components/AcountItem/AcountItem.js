@@ -11,14 +11,14 @@ const cx = classNames.bind(styles);
 
 function AcountItem({ user }) {
     return (
-        <Link to={`/profile/${user.username}`} className={cx('wrapper')}>
-            <Image className={cx('avatar')} src="" alt="avt" />
+        <Link to={`/profile/${user.nickname}`} className={cx('wrapper')}>
+            <Image className={cx('avatar')} src={user.avatar} alt="avt" />
             <div className={cx('infor')}>
                 <div className={cx('name')}>
-                    <h4>{user.name}</h4>
-                    <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                    <h4>{user.full_name}</h4>
+                    {user.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
                 </div>
-                <div className={cx('usernames')}>@{user.username}</div>
+                <div className={cx('usernames')}>@{user.nickname}</div>
             </div>
         </Link>
     );

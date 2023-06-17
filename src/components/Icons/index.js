@@ -292,3 +292,31 @@ export const SoundIcon = ({ width, height, className }) => (
         ></path>
     </svg>
 );
+
+export const BackToTopIcon = ({ width, height, className }) => (
+    <svg width="16" data-e2e="" height="16" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M22.1086 20.3412C23.1028 19.2196 24.8972 19.2196 25.8914 20.3412L42.8955 39.5236C44.2806 41.0861 43.1324 43.5 41.004 43.5L6.99596 43.5C4.86764 43.5 3.71945 41.0861 5.10454 39.5235L22.1086 20.3412Z"
+        ></path>
+        <path d="M4.5 7.5C4.5 5.84315 5.84315 4.5 7.5 4.5L40.5 4.5C42.1569 4.5 43.5 5.84315 43.5 7.5C43.5 9.15685 42.1569 10.5 40.5 10.5L7.5 10.5C5.84315 10.5 4.5 9.15685 4.5 7.5Z"></path>
+    </svg>
+);
+
+export const ReportIcon = ({ width, height, className }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        data-e2e=""
+        width="16"
+        height="14"
+        viewBox="0 0 48 48" 
+        fill="#fff"
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M9 9.31v17.75c5.27-1.73 11.45-2.05 16.16 1.31 4.03 2.88 9.52 2.02 13.84.32V10.94c-5.27 1.73-11.45 2.05-16.16-1.31-4-2.86-9.53-2.01-13.84-.32ZM43 8v22a2 2 0 0 1-1.1 1.79c-5.83 2.9-13.5 3.82-19.06-.16C18.8 28.75 13.32 29.6 9 31.3V44a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8c0-.75.44-1.45 1.1-1.79 5.75-2.87 13.62-3.73 19.06.16 4.37 3.13 10.43 2.04 14.95-.16C41.4 5.56 43 6.54 43 8Z"
+        ></path>
+    </svg>
+);
