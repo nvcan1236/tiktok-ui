@@ -1,17 +1,32 @@
-import Video from "~/components/Video/Video";
-import styles from './Home.module.scss'
-import classNames from "classnames/bind";
+import Video from '~/components/Video/Video';
+import styles from './Home.module.scss';
+import classNames from 'classnames/bind';
+import * as getVideosService from '~/services/getVideosService';
+import { useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Home() {
-    return ( 
+    const [videoList, setVideoList] = useState([]);
+    
+    
+
+    useEffect(()=>{
+        const fetchApi = async () => {
+            const videos = await getVideosService.get();
+            setVideoList(videos);
+            console.log(videoList);
+        };
+        fetchApi();
+    }, []);
+
+    return (
         <div className={cx('wrapper')}>
-            <Video fileUrl={'https://files.fullstack.edu.vn/f8-tiktok/videos/2445-64857411ca34f.mp4'} />
-            <Video fileUrl={'https://files.fullstack.edu.vn/f8-tiktok/videos/2444-6483b48dadb79.mp4'} />
-            <Video fileUrl={'https://files.fullstack.edu.vn/f8-tiktok/videos/2445-64857411ca34f.mp4'} />
+            {
+                videoList.map(video => <Video key={video.id} fileUrl={video.file_url} />)
+            }
         </div>
-     );
+    );
 }
 
 export default Home;
