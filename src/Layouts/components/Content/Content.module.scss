@@ -1,0 +1,11 @@
+.content {
+    flex: 1;
+    height: calc(100vh - var(--default-layout-header-height));
+    width: 100%;
+    // overflow-x: hidden;
+    overflow-y: auto;
+
+    .inner {
+        height: 2000px;
+    }
+}

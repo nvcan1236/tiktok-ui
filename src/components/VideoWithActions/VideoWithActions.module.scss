@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.video {
+    margin-right: 20px;
+}
+
+.actions {
+    width: 48px;
+    height: fit-content;
+    list-style: none;
+}
+
+.action-item {
+    text-align: center;
+    cursor: pointer;
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin: 8px 0 6px 0;
+        background-color: #f1f1f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.161px;
+        color: rgba(22, 24, 35, .75);
+        font-weight: 700;
+    }
+}
